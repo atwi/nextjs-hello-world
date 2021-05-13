@@ -1,7 +1,14 @@
 import axios from 'axios';
 
-axios.get('https://www.reddit.com/r/javascript.json').then(response => {
+axios.get('https://www.reddit.com/r/javascript.json', {
+  headers: {
+    "User-Agent": 'Reddit API test' 
+    }
+  })
+  .then(response => {
+  
   console.log(response);
+  
 });
 
 import Link from 'next/link'
